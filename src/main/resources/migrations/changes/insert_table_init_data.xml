@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet author="Ganesh Kulkarni" id="202404201-1">
+        <insert tableName="audit_log" schemaName="audit_log_service_db">
+            <column name="audit_code" value="101"/>
+            <column name="id" value="101"/>
+            <column name="timestamp" value="2024-04-20 12:00:00"/>
+            <column name="request_id" value="request123"/>
+            <column name="client_ip" value="192.168.0.1"/>
+            <column name="user_agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"/>
+            <column name="http_method" value="GET"/>
+            <column name="request_url" value="http://example.com/api/resource"/>
+            <column name="request_headers" value="{&quot;Content-Type&quot;:&quot;application/json&quot;}"/>
+            <column name="request_body" value="{}"/>
+            <column name="status_code" value="200"/>
+            <column name="response_headers" value="{&quot;Content-Type&quot;:&quot;application/json&quot;}"/>
+            <column name="response_body" value="{}"/>
+            <column name="microservice" value="audit-service"/>
+            <column name="endpoint" value="/api/resource"/>
+            <column name="error_message" value="Error Code"/>
+            <column name="stack_trace" value="at com.example.ExampleClass.method(ExampleClass.java:10)"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
